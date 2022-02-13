@@ -1,0 +1,124 @@
+@import "reset";
+@import "var";
+
+main
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @media screen and (max-width: 850px) {
+        display: unset;
+    }
+
+    .main-content
+    {
+        height: 100vh;
+        width: 730px;
+        background: url(./images/bg-pattern-desktop.svg);
+        background-repeat: no-repeat;
+    }
+}
+
+.image-area
+{
+    overflow: hidden;
+}
+
+.image-area > img
+{
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+#logo
+{
+    transform: translateX(9.7rem) translateY(3rem);
+}
+
+.text-container
+{
+    transform: translateX(9.7rem) translateY(7rem);
+}
+
+.text-container > h1
+{
+    font-size: 4rem;
+    font-weight: 380;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    line-height: 1;
+}
+
+.text-container > h1 mark
+{
+    background: transparent;
+    color: $DesaturatedRed
+}
+
+.text-container > p, p
+{
+    color: $DesaturatedRed;
+    font-size: .8rem;
+    margin: 1rem 0;
+}
+
+form
+{
+    transform: translateX(9.7rem) translateY(8.5rem);
+}
+
+input, button
+{
+    padding: 1rem 2rem;
+    border-radius: 30px;
+}
+
+input
+{
+    color: $textPrimary;
+    font-weight: 400;
+    width: 18rem;
+    border: 1.5px solid $DesaturatedRed;
+}
+
+input::placeholder
+{
+    color: $DesaturatedRed;
+}
+
+button
+{
+    background: $btnColor;
+    padding: .92rem 2.5rem;
+    transform: translateX(-5rem) translateY(.2rem);
+    cursor: pointer;
+    transition: 200ms ease-in-out;
+}
+
+button:hover
+{
+    box-shadow: 0 0 8px 2px $DesaturatedRed;
+}
+
+button > img
+{
+    transform: translateX(.3rem);
+}
+
+#error-icon
+{
+    opacity: 0;
+    width: 1.3rem;
+    transform: translateX(-5.5rem) translateY(.4rem);
+    transition: all 300ms ease-in-out;
+    object-fit: cover;
+}
+
+form > p
+{
+    opacity: 0;
+    font-size: .7rem;
+    transform: translateX(1.8rem)  translateY(-.4rem) !important;
+    transition: all 700ms ease-in-out;
+}
